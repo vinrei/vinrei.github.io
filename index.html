@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FodMate</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <style>
         body, html {
             height: 100%;
@@ -30,8 +34,7 @@
             justify-content: center;
             align-items: center;
             width: 90%;
-            /* height: 33%; */
-            flex: 0 1 66%; /* Allocate 33% of the space */
+            flex: 0 1 66%;
         }
         .branding-img {
             width: 100%;
@@ -41,28 +44,24 @@
         .appstore {
             display: flex;
             justify-content: flex-end;
-            /* align-items: center; */
             flex-direction: column; 
             width: 100%;
-            flex: 0 1 33%; /* Allocate 66% of the space */
+            flex: 0 1 33%;
             margin-bottom: 36px;
             max-width: 500px;
         }
-        .app-svg {
-            width: 100%;
-            height: auto;
-            /* max-width: 400px; */
-
+        .app-store-button-wrapper {
+            display: flex; align-items: flex-end; width: 100%; height: auto;
         }
         a {
-            /* height: auto; */
-            /* display: block; */
             margin-right: 36px;
             margin-left: 36px;
             margin-top: 12px;
             width: 100%;
-            /* max-width: 400px; */
-
+        }
+        .app-svg {
+            width: 100%;
+            height: auto;
         }
 
         /* Large screen width */
@@ -82,24 +81,24 @@
 </head>
 <body>
     <div class="content">
+        
         <div class="branding-container">
             <img class="branding-img" src="./svgs/fodmate-full-branding-v2.svg" alt="FodMate branding">
         </div>
         
         <div class="appstore">
-            <div style="display: flex; align-items: flex-end; width: 100%; height: auto;">
+            <div class="app-store-button-wrapper">
                 <a href="https://apps.apple.com/app/apple-store/id6499235950">
                     <img class="app-svg" src="./svgs/appstore-light.svg" alt="App Store link">
                 </a>
             </div>
-            <div style="display: flex; align-items: flex-end; width: 100%; height: auto;">
-
-            <a href="https://play.google.com/store/apps/details?id=com.vinrei.fodmap">
-                <img class="app-svg" src="./svgs/googleplay-light.svg" alt="Google Play link">
-            </a>
+            <div class="app-store-button-wrapper">
+                <a href="https://play.google.com/store/apps/details?id=com.vinrei.fodmap">
+                    <img class="app-svg" src="./svgs/googleplay-light.svg" alt="Google Play link">
+                </a>
+            </div>
         </div>
 
-        </div>
     </div>
 </body>
 </html>
