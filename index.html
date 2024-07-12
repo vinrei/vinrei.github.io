@@ -7,56 +7,99 @@
     <style>
         body, html {
             height: 100%;
+            width: 100%;
             margin: 0;
             background-color: #f0f0f0; /* Light grey background */
-        }
-        .branding-container {
-            margin: 36px;
+            display: flex;
             justify-content: center;
-            align-items: center;
-            /* height: 33%; */
         }
         .content {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            width: 100%;
             max-width: 1000px;
         }
-        .appstore {
+
+        .branding-container {
             display: flex;
-            justify-content: flex-end;
-            flex-direction: column; 
-            margin: 36px;
-        }
-        .app-svg {
-            /* margin: 12px; */
-            width: 100%;
-            height: auto;
+            justify-content: center;
+            align-items: center;
+            margin: 12px;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            /* height: 33%; */
+            flex: 0 1 66%; /* Allocate 33% of the space */
         }
         .branding-img {
             width: 100%;
             height: auto;
         }
+
+        .appstore {
+            display: flex;
+            justify-content: flex-end;
+            /* align-items: center; */
+            flex-direction: column; 
+            width: 100%;
+            flex: 0 1 33%; /* Allocate 66% of the space */
+            margin-bottom: 36px;
+            max-width: 500px;
+        }
+        .app-svg {
+            width: 100%;
+            height: auto;
+            /* max-width: 400px; */
+
+        }
         a {
             /* height: auto; */
-            display: block;
+            /* display: block; */
+            margin-right: 36px;
+            margin-left: 36px;
+            margin-top: 12px;
+            width: 100%;
+            /* max-width: 400px; */
+
+        }
+
+        /* Large screen width */
+        @media (min-width: 1000px) {
+        .appstore {
+            flex-direction: row;
+            max-width: 1100px;
+        }
+        a {
+            /* height: auto; */
+            /* display: block; */
+            margin-right: 8px;
+            margin-left: 8px;
+        }
         }
     </style>
 </head>
 <body>
     <div class="content">
         <div class="branding-container">
-            <img class="branding-img" src="./svgs/fodmate-full-branding.svg" alt="FodMate branding">
+            <img class="branding-img" src="./svgs/fodmate-full-branding-v2.svg" alt="FodMate branding">
         </div>
-        </div>
+        
         <div class="appstore">
-            <a href="https://apps.apple.com/app/apple-store/id6499235950">
-                <img class="app-svg" src="./svgs/appstore-light.svg" alt="App Store link">
-            </a>
+            <div style="display: flex; align-items: flex-end; width: 100%; height: auto;">
+                <a href="https://apps.apple.com/app/apple-store/id6499235950">
+                    <img class="app-svg" src="./svgs/appstore-light.svg" alt="App Store link">
+                </a>
+            </div>
+            <div style="display: flex; align-items: flex-end; width: 100%; height: auto;">
+
             <a href="https://play.google.com/store/apps/details?id=com.vinrei.fodmap">
                 <img class="app-svg" src="./svgs/googleplay-light.svg" alt="Google Play link">
             </a>
         </div>
-    <!-- </div> -->
+
+        </div>
+    </div>
 </body>
 </html>
