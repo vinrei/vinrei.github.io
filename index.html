@@ -8,8 +8,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <!-- Link to Google Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body, html {
+            font-family: 'Inter', sans-serif;
             height: 100%;
             width: 100%;
             margin: 0;
@@ -18,23 +22,24 @@
             justify-content: center;
         }
         .content {
-            display: flex;
-            flex-direction: column;
+            /* display: flex; */
+            /* flex-direction: column; */
             justify-content: center;
             align-items: center;
-            width: 100%;
+            width: 90%;
             max-width: 1000px;
         }
 
         .branding-container {
-            display: flex;
+            /* display: flex; */
             justify-content: center;
             align-items: center;
             margin: 12px;
+            margin-top: 18px;
             justify-content: center;
             align-items: center;
-            width: 90%;
-            flex: 0 1 66%;
+            /* width: 90%; */
+            /* flex: 0 1 33%; */
         }
         .branding-img {
             width: 100%;
@@ -46,22 +51,38 @@
             justify-content: flex-end;
             flex-direction: column; 
             width: 100%;
-            flex: 0 1 33%;
-            margin-bottom: 36px;
+            /* flex: 0 1 33%; */
+            padding-bottom: 36px;
             max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .app-store-button-wrapper {
-            display: flex; align-items: flex-end; width: 100%; height: auto;
+            display: flex; align-items: flex-end; width: 100%; height: auto; min-height: 100px; ;
         }
         a {
-            margin-right: 36px;
-            margin-left: 36px;
+            margin-right: 12px;
+            margin-left: 12px;
             margin-top: 12px;
             width: 100%;
         }
         .app-svg {
             width: 100%;
-            height: auto;
+            /* height: auto; */
+        }
+        .description-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* width: 90%; */
+            /* flex: 0 1 auto; */
+            /* margin-top: 12px; */
+            margin-bottom: 50px;
+            /* text-align: center; */
+        }
+        .description-text {
+            margin-block-end: 0;
         }
 
         /* Large screen width */
@@ -84,6 +105,13 @@
         
         <div class="branding-container">
             <img class="branding-img" src="./svgs/fodmate-full-branding-v2.svg" alt="FodMate branding">
+        </div>
+
+        <div class="description-container">
+            <h1 style="margin-bottom: 0;">FodMate can help you reduce IBS symptoms</h1>
+            <p class="description-text">In the app you'll find foods and serving sizes that are low FODMAP friendly.
+                The low FODMAP diet has been proven effective in reducing IBS symptoms (bloating, abdominal pain, etc.) for most people. <a style="margin: 0;" href="https://gut.bmj.com/content/71/6/1117">Reference</a></p>
+            <p style="color: grey; font-size: small; width: 100%;">Note: FodMate is not a complete guide to the low FODMAP diet and is not a replacement for professional healthcare advice</p>
         </div>
         
         <div class="appstore">
