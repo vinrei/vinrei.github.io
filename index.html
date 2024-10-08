@@ -61,8 +61,8 @@
             display: flex; align-items: flex-end; width: 100%; height: auto; min-height: 100px; ;
         }
         a {
-            margin-right: 12px;
-            margin-left: 12px;
+            /* margin-right: 12px; */
+            /* margin-left: 12px; */
             margin-top: 12px;
             width: 100%;
         }
@@ -75,28 +75,51 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            /* width: 90%; */
-            /* flex: 0 1 auto; */
-            /* margin-top: 12px; */
             margin-bottom: 50px;
-            /* text-align: center; */
+            text-align: left;
         }
         .description-text {
             margin-block-end: 0;
+            text-align: left;
+            
         }
+        .description-heading {
+            margin-bottom: 0;
+            /* max-width: 695px; */
+            /* font-size: 40px; */
 
+        }
+        .description-container2 {
+            /* max-width: 690px; */
+            max-width: 790px;
+        }
+        .disclaimer {
+            color: grey; font-size: small; width: 100%;
+        }
         /* Large screen width */
-        @media (min-width: 1000px) {
-        .appstore {
-            flex-direction: row;
-            max-width: 1100px;
+        @media (min-width: 600px) {
+            .appstore {
+                flex-direction: row;
+                /* max-width: 710px; */
+                max-width: 810px;
+            }
+            a {
+                /* height: auto; */
+                /* display: block; */
+                margin-right: 8px;
+                margin-left: 8px;
+            }
+            .description-heading {
+                /* font-size: 40px; */
+            }
         }
-        a {
-            /* height: auto; */
-            /* display: block; */
-            margin-right: 8px;
-            margin-left: 8px;
-        }
+        @media (min-width: 765px) {
+            .description-text {
+                text-align: justify;
+            }
+            .disclaimer {
+                text-align: justify;
+            }
         }
     </style>
 </head>
@@ -108,10 +131,12 @@
         </div>
 
         <div class="description-container">
-            <h1 style="margin-bottom: 0;">FodMate can help you reduce IBS symptoms</h1>
-            <p class="description-text">In the app you'll find foods and serving sizes that are low FODMAP friendly.
-                The low FODMAP diet has been proven effective in reducing IBS symptoms (bloating, abdominal pain, etc.) for most people. <a style="margin: 0;" href="https://gut.bmj.com/content/71/6/1117">Reference</a></p>
-            <p style="color: grey; font-size: small; width: 100%;">Note: FodMate is not a complete guide to the low FODMAP diet and is not a replacement for professional healthcare advice</p>
+            <h1 class="description-heading">FodMate can help you reduce IBS symptoms</h1>
+            <div class="description-container2">
+                <p class="description-text">In the app you'll find foods and serving sizes that are FODMAP friendly.
+                    The low FODMAP diet has been proven effective in reducing IBS symptoms (bloating, abdominal pain, etc.) for most people. <a style="margin: 0;" href="https://gut.bmj.com/content/71/6/1117">Reference</a></p>
+                <p class='disclaimer'>Note: FodMate is not a complete guide to the low FODMAP diet and is not a replacement for professional healthcare advice</p>
+            </div>
         </div>
         
         <div class="appstore">
