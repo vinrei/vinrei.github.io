@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kpin Duplicate Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        input[type="text"], button {
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 1rem;
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>4-Digit Duplicate Checker</h1>
+    <form id="numberForm">
+        <input type="text" id="numberInput" placeholder="Enter your kpins" required>
+        <button type="submit">Check for Duplicates</button>
+    </form>
+    <div class="result" id="result"></div>
+
+    <script>
+        document.getElementById('numberForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const input = document.getElementById('numberInput').value;
+            const regex = /\b\d{4}\b/g;
+            const found = input.match(regex);
+            // const numbers = input.split(',').map(num => num.trim());
+            const duplicates = [];
+
+            const seen = new Set();
+            found.forEach(num => {
+                if (num.length === 4 && !isNaN(num)) {
+                    if (seen.has(num)) {
+                        duplicates.push(num);
+                    } else {
+                        seen.add(num);
+                    }
+                }
+            });
+
+            const resultDiv = document.getElementById('result');
+            // resultDiv.textContent = found;
+            if (duplicates.length > 0) {
+                resultDiv.textContent = `Duplicates found: ${duplicates.join(', ')}`;
+            } else {
+                resultDiv.textContent = "No duplicates found.";
+            }
+        });
+    </script>
+</body>
+</html>
