@@ -1,1 +1,1 @@
-# fodmap-web
+npx serve -p 3000 .
