@@ -141,7 +141,7 @@
         }
 
         .hero-phone img {
-            width: 270px;
+            width: 290px;
             max-width: 100%;
             filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.13));
         }
@@ -271,10 +271,11 @@
             margin: 0 auto;
             display: flex;
             align-items: center;
-            gap: 72px;
+            justify-content: center;
+            gap: 80px;
         }
 
-        .detail-text { flex: 1; min-width: 0; }
+        .detail-text { flex: 0 1 480px; min-width: 0; }
 
         .detail .section-eyebrow { text-align: left; color: var(--green-light); }
         .detail .section-heading { text-align: left; color: var(--white); }
@@ -316,7 +317,7 @@
         }
 
         .detail-phone img {
-            width: 250px;
+            width: 300px;
             max-width: 100%;
             filter: drop-shadow(0 24px 60px rgba(0, 0, 0, 0.4));
         }
@@ -471,11 +472,12 @@
 
             .detail { padding: 64px 20px; }
             .detail-inner { flex-direction: column; text-align: center; gap: 40px; }
+            .detail-text { flex: 0 0 auto; }
             .detail .section-eyebrow { text-align: center; }
             .detail .section-heading { text-align: center; }
             .detail-list li { text-align: left; }
             .detail-phone { order: -1; }
-            .detail-phone img { width: 200px; }
+            .detail-phone img { width: 240px; }
 
             .founder-section { padding: 64px 20px; }
             .founder-card {
@@ -581,7 +583,7 @@
     <div class="detail-inner">
         <div class="detail-text">
             <span class="section-eyebrow">Serving sizes</span>
-            <h2 class="section-heading">See what's low FODMAP and in what amounts</h2>
+            <h2 class="section-heading">See what's low FODMAP<br>and in what amounts</h2>
             <ul class="detail-list">
                 <li><span class="tick">✓</span>FODMAP rating for each food at a glance</li>
                 <li><span class="tick">✓</span>Low FODMAP serving sizes clearly displayed</li>
